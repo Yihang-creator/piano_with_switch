@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    overflow: hidden;
+}
+
+button{
+    position: relative;
+    height: 60px;
+    width: 200px;
+    margin: 0 35px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+
+button:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right:-5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+
+@keyframes glow {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
